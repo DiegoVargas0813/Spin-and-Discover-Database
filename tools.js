@@ -55,6 +55,7 @@ toolsRouter.param('id', async (req, res, next, id) => {
 toolsRouter.param('category', async (req,res,next,category) => {
     const endpointToColumn = {
         'name': 'nombreherramienta',
+        'ecosystem': 'ecosistema',
         'purpose': 'propositoia',
         'content': 'tipocontenido',
         'cost': 'costo',
