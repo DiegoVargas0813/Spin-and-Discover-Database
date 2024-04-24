@@ -15,12 +15,12 @@ const getToolById = async (id) => {
 };
 
 const createTool = async (toolAttributes) => {
-    const result = await db.query('INSERT INTO herramienta_ia (nombreherramienta, propositoia, subpropositoia, ecosistema, tipocontenido, descripcion, costo, licencia) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *', [toolAttributes.nombreHerramienta, toolAttributes.propositoia, toolAttributes.subpropositoia, toolAttributes.ecosistema, toolAttributes.tipocontenido, toolAttributes.descripcion, toolAttributes.costo, toolAttributes.licencia]);
+    const result = await db.query('INSERT INTO herramienta_ia (nombreherramienta, propositoia, subpropositoia, ecosistema, tipocontenido, descripcion, costo, licencia, imagen,linkherramienta) VALUES ($1, $2, $3, $4, $5, $6, $7, $8,$9,$10) RETURNING *', [toolAttributes.nombreHerramienta, toolAttributes.propositoia, toolAttributes.subpropositoia, toolAttributes.ecosistema, toolAttributes.tipocontenido, toolAttributes.descripcion, toolAttributes.costo, toolAttributes.licencia, toolAttributes.imagen, toolAttributes.link]);
     return result.rows[0];
 };
 
 const updateTool = async (id, toolAttributes) => {
-    const result = await db.query('UPDATE herramienta_ia SET nombreherramienta = $1, propositoia = $2, subpropositoia = $3, ecosistema = $4, tipocontenido = $5, descripcion = $6, costo = $7, licencia = $8 WHERE idherramienta = $9 RETURNING *', [toolAttributes.nombreHerramienta, toolAttributes.propositoia, toolAttributes.subpropositoia, toolAttributes.ecosistema, toolAttributes.tipocontenido, toolAttributes.descripcion, toolAttributes.costo, toolAttributes.licencia, id]);
+    const result = await db.query('UPDATE herramienta_ia SET nombreherramienta = $1, propositoia = $2, subpropositoia = $3, ecosistema = $4, tipocontenido = $5, descripcion = $6, costo = $7, licencia = $8, imagen = $9, linkherramienta =$10 WHERE idherramienta = $11 RETURNING *', [toolAttributes.nombreHerramienta, toolAttributes.propositoia, toolAttributes.subpropositoia, toolAttributes.ecosistema, toolAttributes.tipocontenido, toolAttributes.descripcion, toolAttributes.costo, toolAttributes.licencia, toolAttributes.imagen, toolAttributes.link, id]);
     return result.rows[0];
 };
 

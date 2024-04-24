@@ -1,22 +1,12 @@
-const express = require('express');
+//MAS ACTUALIZADO
 
+const express = require('express');
 const toolsRouter = express.Router();
 const toolsModel = require('./models/tool');
 
 
 const validateQueryParams = (req, res, next) => {
-    const toolAttributes = req.body; //Si queres aceptar un query desde un link, pones req.query. Si es por un form, pones req.body
-    console.log(toolAttributes);
-    console.log('llegamos aqui');
-
-    if(toolAttributes.nombreHerramienta) console.log('nombreconfirmado');
-    if(toolAttributes.propositoia) console.log('nombreconfirmado');
-    if(toolAttributes.subpropositoia) console.log('nombreconfirmado');
-    if(toolAttributes.ecosistema) console.log('nombreconfirmado');
-    if(toolAttributes.tipocontenido) console.log('nombreconfirmado');
-    if(toolAttributes.descripcion) console.log('nombreconfirmado');
-    if(toolAttributes.costo) console.log('nombreconfirmado');
-    if(toolAttributes.licencia != undefined) console.log('nombreconfirmado');
+    const toolAttributes = req.body;
 
     if(toolAttributes.nombreHerramienta 
         && toolAttributes.propositoia
@@ -25,17 +15,16 @@ const validateQueryParams = (req, res, next) => {
         && toolAttributes.tipocontenido
         && toolAttributes.descripcion
         && toolAttributes.costo
-        && toolAttributes.licencia != undefined){
-        
-        console.log('llegamos aca');
-
-        toolAttributes.licencia = toolAttributes.licencia === 'true' ? true : false;
-
+        && toolAttributes.licencia != undefined
+        && toolAttributes.imagen
+        && toolAttributes.link){
+    
         req.toolAttributes = toolAttributes;
         
         return next();
     }
     const error = new Error('Invalid Request Params');
+    console.log('Error de parametros');
     error.status = 400;
     next(error);
 };
@@ -55,14 +44,15 @@ toolsRouter.param('id', async (req, res, next, id) => {
 toolsRouter.param('category', async (req,res,next,category) => {
     const endpointToColumn = {
         'name': 'nombreherramienta',
-        'ecosystem': 'ecosistema',
         'purpose': 'propositoia',
         'content': 'tipocontenido',
         'cost': 'costo',
-        'license': 'licencia'
+        'license': 'licencia',
+        'imagen': 'imagen',
+        'link': 'linkherramienta'
     };
 
-    if(['name','purpose','content','cost','license']){
+    if(['name','purpose','content','cost','license','imagen','linkherramienta']){
         category = endpointToColumn[category];
         req.category = category;
         console.log(req.category);
@@ -112,7 +102,6 @@ toolsRouter.put('/:id', validateQueryParams, async (req, res, next) => {
 });
   
 toolsRouter.post('/', validateQueryParams, async (req, res, next) => {
-    console.log('post');
     const newTool = await toolsModel.createTool(req.toolAttributes);
     res.status(201).send(newTool);
 });
@@ -123,7 +112,7 @@ toolsRouter.delete('/:id', async(req,res,next) => {
 })
 
 const errorHandler = (err, req, res, next) => {
-    console.log('error');
+    console.log(`error ${err.status}`);
     const status = err.status || 500;
     res.status(status).send(err.message);
 }
