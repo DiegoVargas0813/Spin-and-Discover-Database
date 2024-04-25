@@ -10,8 +10,8 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'tools',
-      user:     'expressadmin',
-      password: 'expressadmin',
+      user:     'superadmin',
+      password: 'superadmin',
       host: 'localhost',
       port: 5432
     },

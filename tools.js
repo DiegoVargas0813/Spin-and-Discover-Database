@@ -8,16 +8,7 @@ const toolsModel = require('./models/tool');
 const validateQueryParams = (req, res, next) => {
     const toolAttributes = req.body;
 
-    if(toolAttributes.nombreHerramienta 
-        && toolAttributes.propositoia
-        && toolAttributes.subpropositoia
-        && toolAttributes.ecosistema 
-        && toolAttributes.tipocontenido
-        && toolAttributes.descripcion
-        && toolAttributes.costo
-        && toolAttributes.licencia != undefined
-        && toolAttributes.imagen
-        && toolAttributes.link){
+    if(toolAttributes.nombreHerramienta ){
     
         req.toolAttributes = toolAttributes;
         

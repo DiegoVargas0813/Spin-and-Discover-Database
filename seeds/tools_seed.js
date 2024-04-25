@@ -1,0 +1,537 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> } 
+ */
+exports.seed = async function(knex) {
+  // Deletes ALL existing entries
+  await knex('herramienta_ia').del()
+  await knex('herramienta_ia').insert([
+    {
+      nombreherramienta: 'PalM2', 
+      propositoia: 'General Purpose',
+      subpropositoia: 'Development - Technical Documentation',
+      ecosistema: 'Foundation Models',
+      tipocontenido: 'Text',
+      descripcion: `PaLM 2 is Google's upgraded AI language model from PaLM 1, improving in reasoning, coding, and translation. Available in different sizes, it's fine-tuned with specific domain data. Although details on training data are limited, it includes various sources. PaLM 2 integrates into Google Bard and Gmail, and is accessible to developers via APIs for use in various products and services.`,
+      licencia: true,
+      imagen: 'logo1',
+      linkherramienta: 'https://ai.google/discover/palm2/'
+    },
+    {
+      nombreherramienta: 'Translation AI', 
+      propositoia: 'General Purpose',
+      ecosistema: 'Cloud Services',
+      tipocontenido: 'Text',
+      descripcion: `Google Cloud Translate offers text translation between languages, noted for its accuracy, scalability, and ease of use, suitable for multilingual content translation.`,
+      costo: 'Subscription Based',
+      licencia: true,
+      imagen: 'logo2',
+      linkherramienta: 'https://cloud.google.com/translate'
+    },
+    {
+      nombreherramienta: 'Amazon EC2 Trn1', 
+      propositoia: 'Development - Technical Documentation',
+      subpropositoia: 'Development - Code Writing',
+      ecosistema: 'Infrastructure',
+      descripcion: `Amazon EC2 Trn1 instances use AWS Trainium accelerators for deep learning, supporting 100B+ parameter models with up to 3.4 petaFLOPS of power and NeuronLink interconnects. They are optimized for training large language and computer vision models, emphasizing high performance, low latency, and cost-effectiveness.`,
+      licencia: true,
+      imagen: 'logo3',
+      linkherramienta: 'https://aws.amazon.com/ec2/instance-types/trn1/'
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+    {
+      nombreherramienta: '', 
+      propositoia: '',
+      subpropositoia: '',
+      ecosistema: '',
+      tipocontenido: '',
+      descripcion: ``,
+      licencia: true,
+      imagen: '',
+      linkherramienta: ''
+    },
+  ]);
+};

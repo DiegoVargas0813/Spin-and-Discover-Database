@@ -8,11 +8,11 @@ exports.up = function(knex) {
     t.text('nombreherramienta').notNull();
     t.text('propositoia');
     t.text('subpropositoia');
-    t.text('ecosistema').notNull();
+    t.text('ecosistema');
     t.text('tipocontenido');
-    t.text('descripcion').notNull();
-    t.text('costo').notNull();
-    t.boolean('licencia').notNull();
+    t.text('descripcion');
+    t.text('costo');
+    t.boolean('licencia');
   })
 };
 

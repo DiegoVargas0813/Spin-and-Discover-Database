@@ -5,7 +5,7 @@
 exports.up = function(knex) {
     return knex.schema.alterTable('herramienta_ia', function(table) {
         // Add a new column
-        table.text('imagen');
+        table.text('imagen').notNull();
     });
 };
 

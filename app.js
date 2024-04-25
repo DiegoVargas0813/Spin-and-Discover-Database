@@ -34,14 +34,12 @@ const toolAtributes = {
   propositoia: 'pROP',
   subpropositoia: 'asdas',
   ecosistema: 'asdasd',
-  tipocontenido: 'asdads',
-  descripcion: 'asdasd',
   costo: 'asdas',
   licencia: false,
-  imagen : 'nombre imagen2',
-  link: 'urlrandom'
+  imagen : 'logo30',
+  link: 'https://cloud.google.com/ai-infrastructure'
 }
-axiostest.postTools(toolAtributes);
+//axiostest.postTools(toolAtributes);
 //axiostest.postTools(toolAtributes);
 //axiostest.putTools(10, toolAtributes);
 //axiostest.deleteTools(8);
