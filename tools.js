@@ -37,6 +37,7 @@ toolsRouter.param('category', async (req,res,next,category) => {
         'name': 'nombreherramienta',
         'purpose': 'propositoia',
         'content': 'tipocontenido',
+        'ecosystem': 'ecosistema',
         'cost': 'costo',
         'license': 'licencia',
         'imagen': 'imagen',
@@ -56,6 +57,9 @@ toolsRouter.param('category', async (req,res,next,category) => {
 
 toolsRouter.get('/:category/:value', async (req,res,next) =>{
     const value = req.params.value;
+
+    console.log(req.params.category);
+    console.log(value);
     try{
         if(req.category === 'propositoia'){
             const tagTool = await toolsModel.getByConditionPurpose(value);
@@ -86,6 +90,9 @@ toolsRouter.get('/', async (req, res, next) => {
 toolsRouter.get('/:id', (req, res, next) => {
     return res.send(req.tool);
 });
+
+
+
 
 toolsRouter.put('/:id', validateQueryParams, async (req, res, next) => {
     const updatedTool = await toolsModel.updateTool(req.toolId, req.toolAttributes);

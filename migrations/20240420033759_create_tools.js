@@ -12,7 +12,7 @@ exports.up = function(knex) {
     t.text('tipocontenido');
     t.text('descripcion');
     t.text('costo');
-    t.boolean('licencia');
+    t.text('licencia');
   })
 };
 
