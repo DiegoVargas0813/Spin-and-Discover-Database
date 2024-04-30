@@ -350,7 +350,7 @@ exports.seed = async function (knex) {
     {
       nombreherramienta: "Azure Cognitive Search",
       propositoia: "Operations",
-      subpropositoia: "Marketing - Content Generation",
+      subpropositoia: "Marketing",
       ecosistema: "Cloud Services",
       costo: "Subscription-based",
       tipocontenido: "Text",
@@ -419,7 +419,7 @@ exports.seed = async function (knex) {
     {
       nombreherramienta: "Codey",
       propositoia: "Development",
-      subpropositoia: "Development - Technical Documentation",
+      subpropositoia: "Development",
       ecosistema: "Cloud Services",
       tipocontenido: "Code",
       descripcion: `The Vertex AI Codey APIs, powered by the PaLM 2 model, enable code generation, completion, and discussion across various programming languages. These APIs are designed to automate tasks, speed up coding, and assist in debugging, although they are still under development.`,
@@ -430,7 +430,7 @@ exports.seed = async function (knex) {
     {
       nombreherramienta: "Vertex AI Workbench",
       propositoia: "Development",
-      subpropositoia: "Development - Technical Documentation",
+      subpropositoia: "Development",
       ecosistema: "Applications",
       tipocontenido: "Code",
       descripcion: `Vertex AI Workbench is a managed JupyterLab environment on Google Cloud, built on Google Kubernetes Engine for scalable and reliable ML model development, training, and deployment. It integrates with Google Cloud services, enhancing efficiency for data scientists and ML engineers across the machine learning lifecycle.`,
@@ -441,7 +441,7 @@ exports.seed = async function (knex) {
     {
       nombreherramienta: "AutoML",
       propositoia: "Development",
-      subpropositoia: "Development - Technical Documentation",
+      subpropositoia: "Development",
       ecosistema: "Cloud Services",
       tipocontenido: "Text",
       descripcion: `Google Cloud AutoML simplifies building and deploying ML models with automated data preparation, feature engineering, model training, and evaluation. It supports tasks like image and text classification, providing scalability, accuracy, and security, enabling developers to create models more efficiently.`,
