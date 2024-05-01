@@ -82,7 +82,7 @@ toolsRouter.get('/', async (req, res, next) => {
         const dbTools = await toolsModel.getAllTools();
         res.send(dbTools);
     } catch (e) {
-        const error = new Error(`Database error occurred: ${e.message}`);
+        const error = new Error(`Database error occurred`);
         next(error);
     }
 });
@@ -90,7 +90,6 @@ toolsRouter.get('/', async (req, res, next) => {
 toolsRouter.get('/:id', (req, res, next) => {
     return res.send(req.tool);
 });
-
 
 
 
