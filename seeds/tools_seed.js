@@ -21,7 +21,6 @@ exports.seed = async function (knex) {
       nombreherramienta: "Translation AI",
       propositoia: "General Purpose",
       ecosistema: "Cloud Services",
-      costo: "Subscription-based",
       tipocontenido: "Text",
       descripcion: `Google Cloud Translate offers text translation between languages, noted for its accuracy, scalability, and ease of use, suitable for multilingual content translation.`,
       costo: "Subscription Based",

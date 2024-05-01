@@ -105,7 +105,7 @@ toolsRouter.post('/', validateQueryParams, async (req, res, next) => {
 
 toolsRouter.delete('/:id', async(req,res,next) => {
     const deletedTool = await toolsModel.deleteTool(req.toolId);
-    res.send(deletedTool);
+    res.status(204).send(deletedTool);
 })
 
 const errorHandler = (err, req, res, next) => {

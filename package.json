@@ -12,7 +12,7 @@
   "version": "1.0.0",
   "main": "apiRequest.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "keywords": [],
   "author": "",
